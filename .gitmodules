@@ -1,3 +1,6 @@
 [submodule "upgradeable_contracts/lib/forge-std"]
 	path = upgradeable_contracts/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "upgradeable_contracts/lib/openzeppelin-contracts"]
+	path = upgradeable_contracts/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
