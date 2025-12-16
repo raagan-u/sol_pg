@@ -25,7 +25,7 @@ contract SmallProxy is Proxy {
     }
 
     function getDataToTransact(uint256 numToUpdate) public pure returns (bytes memory) {
-        return abi.encodeWithSignature("setValue(uint256", numToUpdate);
+        return abi.encodeWithSignature("setValue(uint256)", numToUpdate);
     }
 
     function readStorage() public view returns (uint256 valueAtStorageSlotZero) {
@@ -47,5 +47,14 @@ contract ImplementationA {
 
     function getValue() public view returns (uint256) {
         return value;
+    }
+}
+
+
+contract ImplementationB {
+    uint256 public value;
+
+    function setValue(uint256 _value) public {
+        value = _value + 2;
     }
 }
